@@ -1,0 +1,182 @@
+/* line 13, introspection.css.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 24, introspection.css.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 27, introspection.css.scss */
+body {
+  line-height: 1; }
+
+/* line 30, introspection.css.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 33, introspection.css.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 37, introspection.css.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 42, introspection.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+    Now here is when interesting things start to appear.
+    
+    We set up <body> styles with default font and nice gradient in the background.
+    And yes, there is a lot of repetition there because of -prefixes but we don't
+    want to leave anybody behind.
+    */
+/* line 54, introspection.css.scss */
+body {
+  font-family: 'PT Sans', sans-serif;
+  min-height: 740px;
+  background: #FFFFFF; }
+
+/*
+    Now let's bring some text styles back ...
+*/
+/* line 64, introspection.css.scss */
+b, strong {
+  font-weight: bold; }
+
+/* line 65, introspection.css.scss */
+i, em {
+  font-style: italic; }
+
+/*
+    ... and give links a nice look.
+*/
+/* line 70, introspection.css.scss */
+a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0 0.1em;
+  background: rgba(255, 255, 255, 0.5);
+  text-shadow: -1px -1px 2px rgba(100, 100, 100, 0.9);
+  border-radius: 0.2em;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+
+/* line 86, introspection.css.scss */
+a:hover,
+a:focus {
+  background: white;
+  text-shadow: -1px -1px 2px rgba(100, 100, 100, 0.5); }
+
+/*
+    Because the main point behind the impress.js demo is to demo impress.js
+    we display a fallback message for users with browsers that don't support
+    all the features required by it.
+    
+    All of the content will be still fully accessible for them, but I want
+    them to know that they are missing something - that's what the demo is
+    about, isn't it?
+    
+    And then we hide the message, when support is detected in the browser.
+*/
+/* line 105, introspection.css.scss */
+.fallback-message {
+  font-family: sans-serif;
+  line-height: 1.3;
+  width: 780px;
+  padding: 10px 10px 0;
+  margin: 20px auto;
+  border: 1px solid #E4C652;
+  border-radius: 10px;
+  background: #EEDC94; }
+
+/* line 118, introspection.css.scss */
+.fallback-message p {
+  margin-bottom: 10px; }
+
+/* line 122, introspection.css.scss */
+.impress-supported .fallback-message {
+  display: none; }
+
+/*
+    Now let's style the presentation steps.
+    
+    We start with basics to make sure it displays correctly in everywhere ...
+*/
+/* line 133, introspection.css.scss */
+.step {
+  position: relative;
+  width: 900px;
+  padding: 40px;
+  margin: 20px auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'PT Serif', georgia, serif;
+  font-size: 48px;
+  line-height: 1.5; }
+
+/*
+    ... and we enhance the styles for impress.js.
+    
+    Basically we remove the margin and make inactive steps a little bit transparent.
+*/
+/* line 157, introspection.css.scss */
+.impress-enabled .step {
+  margin: 0;
+  opacity: 0.3;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s; }
+
+/* line 169, introspection.css.scss */
+.impress-enabled .step.active {
+  opacity: 1; }
+
+/* line 176, introspection.css.scss */
+#overview .name {
+  font-size: 72px;
+  text-align: center; }
+
+/* line 183, introspection.css.scss */
+#junior-project .background {
+  background-color: white;
+  padding: 20px;
+  position: relative; }
+  /* line 187, introspection.css.scss */
+  #junior-project .background .head {
+    text-align: center; }
+  /* line 191, introspection.css.scss */
+  #junior-project .background .vid {
+    padding: 20px; }
